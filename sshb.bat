@@ -124,7 +124,11 @@ if %M%==1 (goto SSH) ^
 else if %M%==2 (goto SSHFSWIN) ^
 else if %M%==q (goto EOF) ^
 else if %M%==Q (goto EOF) ^
-else (goto EOF)
+else (
+   call echo.
+   call echo  Invalid task selection
+   goto MENU
+)
 
 :: Start SSH terminal session
 :SSH
