@@ -109,7 +109,7 @@ echo.
 echo   Choose a task:
 echo.
 echo    1 - SSH session
-echo    2 - SFTP mounting (SSHFS-win)
+echo    2 - SSHFS mounting
 echo.
 echo    Enter - back to %SSH_HOSTS_FILE%
 echo.
