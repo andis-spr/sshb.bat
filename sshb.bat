@@ -141,8 +141,9 @@ if %IS_KEYFILE%=="true" (
 if %IS_CUSTOM_PORT%=="true" (
    call set SSH_CMD=%SSH_CMD% -p %PORT%
 )
-
+cls
 %SSH_CMD%
+cls
 goto MENU
 
 :SSHFSWIN
