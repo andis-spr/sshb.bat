@@ -6,11 +6,14 @@ Quickly searching and selecting an SSH host from a bookmark text file, then
  - Starting a command line SSH session.
  - Mounting SFTP shares in Windows Explorer using SSHFS-win.
 
+
+# `ssh-hosts.txt`
+
 The bookmark list by default is stored in `ssh-hosts.txt` file located in the script directory.
 
 This script accepts SSH bookmarks textfile path as it's first parameter e.g. `.\sshb.bat "D:\ssh\ssh-hosts.txt"`.
 
-# `ssh-hosts.txt`
+## Format
 
 ```
 user@host[:/remote-path] [keyfile-path] [port-number] [short-descriptive-name]
