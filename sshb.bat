@@ -94,7 +94,7 @@ if %IS_SHORTNAME%=="false" (
 ) 
 :: Show the action selection menu
 :MENU
-title %USER_HOSTADDR_DIRPATH%
+title %SHORTNAME%
 echo.
 echo  %SHORTNAME%
 echo.
@@ -181,6 +181,7 @@ echo Connecting to %HOSTADDR%...
 echo.
 title sshfs %FIRST_UNUSED_DRIVE_LETTER%: %SHORTNAME%
 %SSHFS_CMD%
+cls
 goto MENU
 :EOF
 title Command Prompt
