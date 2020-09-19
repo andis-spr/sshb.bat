@@ -89,15 +89,14 @@ if "%SHORTNAME%"=="-" (
    set IS_SHORTNAME="false"
 )
 
+if %IS_SHORTNAME%=="false" (
+   set SHORTNAME=%USER_HOSTADDR_DIRPATH%
+) 
 :: Show the action selection menu
 :MENU
 title %USER_HOSTADDR_DIRPATH%
 echo.
-if %IS_SHORTNAME%=="true" (
 echo  %SHORTNAME%
-) else (
-echo  %USER%@%HOSTADDR%
-)
 echo.
 echo   User: %USER%
 echo   Host: %HOSTADDR%
@@ -169,17 +168,17 @@ umask=0000,^
 uid=-1,^
 gid=-1,^
 idmap=user,^
-volname=%USER_HOSTADDR_DIRPATH:~0,31%
+volname=sshfs\\\\%SHORTNAME:~0,24%
 
 if %IS_KEYFILE%=="true" (
    call set SSHFS_CMD=%SSHFS_CMD%,-i=%KEYFILE%
 )
-
 echo.
-echo Drive letter "%FIRST_UNUSED_DRIVE_LETTER%:" assigned as mount point with name "%USER_HOSTADDR_DIRPATH:~0,31%".
+echo Drive letter "%FIRST_UNUSED_DRIVE_LETTER%:" assigned as the mount point with the name "sshfs\\%SHORTNAME:~0,24%"
 echo.
 echo Connecting to %HOSTADDR%...
 echo.
+title sshfs %FIRST_UNUSED_DRIVE_LETTER%: %SHORTNAME%
 %SSHFS_CMD%
 goto MENU
 :EOF
