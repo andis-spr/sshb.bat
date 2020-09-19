@@ -1,5 +1,12 @@
 @SETLOCAL
 @ECHO OFF
+
+:: Set path for sshfs-win executable
+set PATH="%SYSTEMDRIVE%\Program Files\SSHFS-Win\bin";%PATH%
+
+goto START
+
+:START
 cls
 
 :: Set SSH hosts list file
@@ -104,16 +111,19 @@ echo.
 echo   Choose a task:
 echo.
 echo    1 - SSH session
-echo    2 - SFTP mount (SSHFS-win)
+echo    2 - SFTP mounting (SSHFS-win)
+echo.
+echo    Enter - back to %SSH_HOSTS_FILE%
 echo.
 echo    q - Exit
 echo.
 set "M="
-set /p M=" Task > " || goto SSH
+set /p M=" Task > " || goto START
 
 if %M%==1 (goto SSH) ^
 else if %M%==2 (goto SSHFSWIN) ^
-else if %M%=="q" (goto EOF) ^
+else if %M%==q (goto EOF) ^
+else if %M%==Q (goto EOF) ^
 else (goto EOF)
 
 :: Start SSH terminal session
@@ -132,7 +142,6 @@ if %IS_CUSTOM_PORT%=="true" (
 goto MENU
 
 :SSHFSWIN
-set PATH="C:\Program Files\SSHFS-Win\bin"
 
 :: Pick an unused drive letter
 for %%i in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) ^
