@@ -176,6 +176,11 @@ if %IS_KEYFILE%=="true" (
    call set SSHFS_CMD=%SSHFS_CMD%,-i=%KEYFILE%
 )
 
+echo.
+echo Drive letter "%FIRST_UNUSED_DRIVE_LETTER%:" assigned as mount point with name "%USER_HOSTADDR_DIRPATH:~0,31%".
+echo.
+echo Connecting to %HOSTADDR%...
+echo.
 %SSHFS_CMD%
 goto MENU
 :EOF
