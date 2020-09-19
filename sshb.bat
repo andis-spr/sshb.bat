@@ -123,8 +123,9 @@ else if %M%==2 (goto SSHFSWIN) ^
 else if %M%==q (goto EOF) ^
 else if %M%==Q (goto EOF) ^
 else (
+   cls
    call echo.
-   call echo  Invalid task selection
+   call echo  Invalid task mapping: %M%
    goto MENU
 )
 
