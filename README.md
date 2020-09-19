@@ -1,4 +1,4 @@
-This is a Windows Batch script that helps with using SSH bookmarks in a simple text file.
+This is a Windows Batch script that helps using SSH bookmarks organized in a text file.
 
 # Features
 
