@@ -53,8 +53,6 @@ for /f "tokens=1,2 delims=:" %%a in ("%HOSTADDR_DIRPATH%") do (
 :: Set the directory path if not provided
 if "%DIRPATH%"=="" (set DIRPATH="/")
 
-title %USER_HOSTADDR_DIRPATH%
-
 :: Check for presence of actual keyfile value
 
 set IS_KEYFILE="true"
@@ -93,6 +91,7 @@ if "%SHORTNAME%"=="-" (
 
 :: Show the action selection menu
 :MENU
+title %USER_HOSTADDR_DIRPATH%
 echo.
 if %IS_SHORTNAME%=="true" (
 echo  %SHORTNAME%
