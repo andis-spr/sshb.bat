@@ -31,10 +31,10 @@ if "%HOST_LINE%"=="" (
 
 :: Seperate user, host address, directory path and keyfile from host line in variables
 for /f "tokens=1,2,3,4 delims= " %%a in ("%HOST_LINE%") do (
-   set USER_HOSTADDR_DIRPATH=%%a
-   set KEYFILE=%%b
-   set PORT=%%c
-   set SHORTNAME=%%d
+   set LABEL=%%a
+   set USER_HOSTADDR_DIRPATH=%%b
+   set KEYFILE=%%c
+   set PORT=%%d
 )
 
 for /f "tokens=1,2 delims=:" %%a in ("%USER_HOSTADDR_DIRPATH%") do (
@@ -77,26 +77,29 @@ if "%PORT%"=="-" (
    set IS_CUSTOM_PORT="false"
 )
 
-:: Check if a shortname has been set
+:: Check if a label has been set
 
-set IS_SHORTNAME="true"
+set IS_LABEL="true"
 
-if "%SHORTNAME%"=="" (
-   set IS_SHORTNAME="false"
+if "%LABEL%"=="" (
+   set IS_LABEL="false"
 )
 
-if "%SHORTNAME%"=="-" (
-   set IS_SHORTNAME="false"
+if "%LABEL%"=="-" (
+   set IS_LABEL="false"
 )
 
-if %IS_SHORTNAME%=="false" (
-   set SHORTNAME=%USER_HOSTADDR_DIRPATH%
+if %IS_LABEL%=="false" (
+   set LABEL=%USER%@%HOSTADDR%
 ) 
+
+set LABEL=%LABEL%:%DIRPATH%
+
 :: Show the action selection menu
 :MENU
-title %SHORTNAME%
+title %LABEL%
 echo.
-echo  %SHORTNAME%
+echo  %LABEL%
 echo.
 echo   User: %USER%
 echo   Host: %HOSTADDR%
@@ -159,6 +162,7 @@ do set "FIRST_UNUSED_DRIVE_LETTER=%%h" & goto done
 :done
 
 :: Start SSHFS-win session
+set VOLNAME=sshfs:%LABEL:~0,25%
 
 set SSHFS_CMD=sshfs ^
 -f ^
@@ -170,17 +174,17 @@ umask=0000,^
 uid=-1,^
 gid=-1,^
 idmap=user,^
-volname=sshfs\\\\%SHORTNAME:~0,24%
+volname=%VOLNAME%
 
 if %IS_KEYFILE%=="true" (
    call set SSHFS_CMD=%SSHFS_CMD%,-i=%KEYFILE%
 )
 echo.
-echo Drive letter "%FIRST_UNUSED_DRIVE_LETTER%:" assigned as the mount point with the name "sshfs\\%SHORTNAME:~0,24%"
+echo Drive letter "%FIRST_UNUSED_DRIVE_LETTER%:" assigned as mount point with the volume name "%VOLNAME%"
 echo.
 echo Connecting to %HOSTADDR%...
 echo.
-title sshfs %FIRST_UNUSED_DRIVE_LETTER%: %SHORTNAME%
+title sshfs %FIRST_UNUSED_DRIVE_LETTER%: %LABEL%
 %SSHFS_CMD%
 goto MENU
 :EOF

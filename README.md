@@ -16,19 +16,18 @@ This script accepts SSH bookmarks textfile path as it's first parameter e.g. `.\
 ## Format
 
 ```
-user@host[:/remote-path] [keyfile-path] [port-number] [short-descriptive-name]
+[label] user@host[:/remote-path] [keyfile-path] [port-number]
 ```
 
 e.g.
 
 ```
-dev@example.com:/var/log ~/.ssh/dev_server - -
-sales@example.com:/home/sales/work-files ~/.ssh/id_rsa - sales
-terry@192.168.111.112 - 23 terrys-computer
+terrys-computer terry@192.168.111.112 - 22
+home-router root@192.168.2.1:/etc ~/.ssh/homerouter 23
 ...
 ```
 
-Parameters `keyfile-path`, `port-number`, `short-descriptive-name` are replaced with `-` if not intended to be set.
+Parameters `label`, `keyfile-path`, `port-number` can be replaced with `-` for use of a default value.
 
 # Requirements 
 
