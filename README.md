@@ -4,8 +4,7 @@ This is a Windows Batch script that helps using SSH bookmarks organized in a tex
 
 Quickly searching and selecting an SSH host from a bookmark text file, then
  - Starting a command line SSH session.
- - Mounting SFTP shares in Windows Explorer using SSHFS-win.
-
+ - Mounting SSHFS directories in Windows Explorer using SSHFS-win.
 
 # `ssh-hosts.txt`
 
@@ -32,7 +31,7 @@ Parameters `label`, `keyfile-path`, `port-number` can be replaced with `-` for u
 # Requirements 
 
 - <a href="https://github.com/junegunn/fzf">`fzf`</a> to display and search through SSH bookmarks textfile.
-- <a href="https://github.com/billziss-gh/sshfs-win">`sshfs-win`</a>  to mount SFTP shares in Windows Explorer.
+- <a href="https://github.com/billziss-gh/sshfs-win">`sshfs-win`</a>  to mount SSHFS directories in Windows Explorer.
 
 # License
 
