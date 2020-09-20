@@ -140,9 +140,10 @@ if %IS_KEYFILE%=="true" (
 if %IS_CUSTOM_PORT%=="true" (
    call set SSH_CMD=%SSH_CMD% -p %PORT%
 )
-cls
+echo.
+echo Connecting to %HOSTADDR%...
+echo.
 %SSH_CMD%
-cls
 goto MENU
 
 :SSHFSWIN
@@ -181,7 +182,6 @@ echo Connecting to %HOSTADDR%...
 echo.
 title sshfs %FIRST_UNUSED_DRIVE_LETTER%: %SHORTNAME%
 %SSHFS_CMD%
-cls
 goto MENU
 :EOF
 title Command Prompt
