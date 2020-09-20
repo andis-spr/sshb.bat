@@ -23,7 +23,7 @@ if "%1"=="" (
 title %SSH_HOSTS_FILE%
 
 :: Pick host line from text file
-for /F "tokens=*" %%g in ('type %SSH_HOSTS_FILE% ^| fzf --layout="reverse"') do (set HOST_LINE=%%g)
+for /F "tokens=*" %%g in ('type %SSH_HOSTS_FILE% ^| fzf --cycle --layout="reverse-list"') do (set HOST_LINE=%%g)
 
 if "%HOST_LINE%"=="" (
    call goto :eof
