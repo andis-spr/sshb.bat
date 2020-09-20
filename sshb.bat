@@ -11,8 +11,8 @@ cls
 
 :: Set SSH hosts list file
 if "%1"=="" (
-   if exist "%~dp0\ssh-hosts.txt" (
-      call set SSH_HOSTS_FILE=%~dp0\ssh-hosts.txt
+   if exist "%USERPROFILE%\ssh-hosts.txt" (
+      call set SSH_HOSTS_FILE=%USERPROFILE%\ssh-hosts.txt
    ) else (
       call set SSH_HOSTS_FILE=%~dp0\example.ssh-hosts.txt
    )

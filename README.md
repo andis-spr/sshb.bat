@@ -8,7 +8,7 @@ Quickly searching and selecting an SSH host from a bookmark text file, then
 
 # `ssh-hosts.txt`
 
-The bookmark list by default is stored in `ssh-hosts.txt` file located in the script directory.
+The bookmark list by default is stored in the `%USERPROFILE%\ssh-hosts.txt` file.
 
 This script accepts SSH bookmarks textfile path as it's first parameter e.g. `.\sshb.bat "D:\ssh\ssh-hosts.txt"`.
 
