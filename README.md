@@ -1,8 +1,8 @@
-This is a Windows Batch script which helps using SSH host bookmarks stored in a text file.
+This is a simple Windows Batch script which helps utilizing SSH bookmarks stored in a text file.
 
 # Preview
 
-<img src="https://i.imgur.com/ISOI2lE.png" />
+<img src="https://i.imgur.com/Rb4JAAK.png" />
 
 # Features
 
