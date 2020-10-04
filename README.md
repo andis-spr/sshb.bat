@@ -30,7 +30,7 @@ home-router root@192.168.2.1:/etc ~/.ssh/homerouter 23
 ...
 ```
 
-Parameters `label`, `keyfile-path`, `port-number` can be replaced with `-` for use of a default value.
+Parameters `label`, `keyfile-path`, `port-number` can be replaced with a default `-` value.
 
 # Requirements 
 
