@@ -8,9 +8,9 @@ Windows script for using SSH bookmarks stored in a text file.
 
 ## Features
 
-Quickly searching and selecting an SSH host from a bookmark text file, then
- - Starting an SSH session in command line.
- - Mounting SSHFS directories in Windows Explorer using SSHFS-win.
+Search and select an SSH host stored in a text file, then
+ - Start an SSH session in Windows command line..
+ - ..or mount SSHFS directories in Windows Explorer via SSHFS-win.
 
 ## `ssh-hosts.txt`
 
