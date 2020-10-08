@@ -1,6 +1,6 @@
 # `sshb.bat`
 
-Windows script for using Secure Shell (SSH) bookmarks stored in a text file.
+Windows script for conveniently using SSH bookmarks stored in a text file.
 
 ## Preview
 
