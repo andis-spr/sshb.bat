@@ -38,7 +38,7 @@ Parameters `label`, `keyfile-path`, `port-number` can be replaced with a default
 
 - <a href="https://github.com/junegunn/fzf">fzf</a>
 - <a href="https://github.com/billziss-gh/sshfs-win">SSHFS-Win</a>
-- <a href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview">OpenSSH</a> (included by default in Windows 10).
+- <a href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview">OpenSSH</a> (included by default with Windows 10)
 
 ## License
 
