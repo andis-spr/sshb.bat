@@ -37,7 +37,8 @@ Parameters `label`, `keyfile-path`, `port-number` can be replaced with a default
 ## Requirements 
 
 - <a href="https://github.com/junegunn/fzf">`fzf`</a> to display and search through SSH bookmarks textfile.
-- <a href="https://github.com/billziss-gh/sshfs-win">`sshfs-win`</a>  to mount SSHFS directories in Windows Explorer.- <a href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview">OpenSSH</a> (Ships by default with Windows 10)
+- <a href="https://github.com/billziss-gh/sshfs-win">`sshfs-win`</a>  to mount SSHFS directories in Windows Explorer.
+- <a href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview">OpenSSH</a> (included by default in Windows 10).
 
 ## License
 
