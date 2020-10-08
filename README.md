@@ -1,6 +1,6 @@
 # `win-ssh-bookmarks`
 
-Windows script for using SSH bookmarks stored in a text file.
+Windows script for using Secure Shell (SSH) bookmarks stored in a text file.
 
 ## Preview
 
@@ -8,17 +8,17 @@ Windows script for using SSH bookmarks stored in a text file.
 
 ## Features
 
-Find and select an SSH host stored in a text file, then
- - start an SSH session in Windows command line
- - or mount SSHFS directories in Windows Explorer via SSHFS-win.
+Find and select an SSH bookmark to
+ - start a Secure Shell session in Windows command line (via OpenSSH)
+ - mount SSHFS directories in Windows Explorer (via <a href="https://github.com/billziss-gh/sshfs-win">`sshfs-win`</a>)
 
 ## `ssh-hosts.txt`
 
-The bookmark list by default is stored in the `%USERPROFILE%\ssh-hosts.txt` file.
+The SSH bookmark list by default is located in the `%USERPROFILE%\ssh-hosts.txt` file.
 
-This script accepts SSH bookmarks textfile path as it's first parameter e.g. `.\sshb.bat "D:\ssh\ssh-hosts.txt"`.
+This script accepts SSH bookmarks text file path as it's first parameter e.g. `.\sshb.bat "D:\ssh\ssh-hosts.txt"`.
 
-### Format
+### Format of storing the bookmarks
 
 ```
 [label] user@host[:/remote-path] [keyfile-path] [port-number]
@@ -37,7 +37,7 @@ Parameters `label`, `keyfile-path`, `port-number` can be replaced with a default
 ## Requirements 
 
 - <a href="https://github.com/junegunn/fzf">`fzf`</a> to display and search through SSH bookmarks textfile.
-- <a href="https://github.com/billziss-gh/sshfs-win">`sshfs-win`</a>  to mount SSHFS directories in Windows Explorer.
+- <a href="https://github.com/billziss-gh/sshfs-win">`sshfs-win`</a>  to mount SSHFS directories in Windows Explorer.- <a href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview">OpenSSH</a> (Ships by default with Windows 10)
 
 ## License
 
