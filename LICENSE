@@ -1,4 +1,4 @@
-win-ssh-bookmarks - Windows script for using Secure Shell (SSH) bookmarks stored in a text file
+sshb.bat - Windows script for using Secure Shell (SSH) bookmarks stored in a text file
 Copyright © 2020 Andis Spriņķis
 
 Permission is hereby granted, free of charge, to any person obtaining
