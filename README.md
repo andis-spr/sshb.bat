@@ -10,7 +10,7 @@ Windows script for using Secure Shell (SSH) bookmarks stored in a text file.
 
 Find and select an SSH bookmark to
  - start a Secure Shell session in Windows command line (via OpenSSH)
- - mount SSHFS directories in Windows Explorer (via <a href="https://github.com/billziss-gh/sshfs-win">`sshfs-win`</a>)
+ - mount SSHFS directories in Windows Explorer (via <a href="https://github.com/billziss-gh/sshfs-win">SSHFS-Win</a>)
 
 ## `ssh-hosts.txt`
 
@@ -36,8 +36,8 @@ Parameters `label`, `keyfile-path`, `port-number` can be replaced with a default
 
 ## Requirements 
 
-- <a href="https://github.com/junegunn/fzf">`fzf`</a> to display and search through SSH bookmarks textfile.
-- <a href="https://github.com/billziss-gh/sshfs-win">`sshfs-win`</a>  to mount SSHFS directories in Windows Explorer.
+- <a href="https://github.com/junegunn/fzf">fzf</a> to display and search through SSH bookmarks textfile.
+- <a href="https://github.com/billziss-gh/sshfs-win">SSHFS-Win</a>  to mount SSHFS directories in Windows Explorer.
 - <a href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview">OpenSSH</a> (included by default in Windows 10).
 
 ## License
