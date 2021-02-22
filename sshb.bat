@@ -168,6 +168,7 @@ set SSHFS_CMD=sshfs ^
 -f ^
 %USER%@%HOSTADDR%:%DIRPATH% %FIRST_UNUSED_DRIVE_LETTER%: ^
 -o ^
+ssh_command="/bin/ssh.exe -vvv",^
 create_file_umask=0111,^
 create_dir_umask=0000,^
 umask=0000,^
